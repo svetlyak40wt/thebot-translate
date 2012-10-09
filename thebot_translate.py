@@ -8,9 +8,8 @@ import requests
 class Plugin(thebot.Plugin):
     @thebot.route('translate (?P<some_text>.+)')
     @thebot.route('translate (?P<some_text>.+) (?P<from_to>..-..)')
-    def on(self, request, some_text, from_to='en-ru'):
-        """Translates given text from one language to another.
-        """
+    def translate(self, request, some_text, from_to='en-ru'):
+        """Translates given text from one language to another."""
 
         if from_to not in self.get_directions():
             request.respond(u'Supported translation directions are: ' + u', '.join(
