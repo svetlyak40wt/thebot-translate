@@ -11,7 +11,7 @@ setup(
     url='http://github.com/svetlyak40wt/thebot-translate/',
     classifiers=[
         'Development Status :: 4 - Beta',
-        'Environment :: Server',
+        'Environment :: Plugins',
         'Intended Audience :: Developers',
         'Intended Audience :: System Administrators',
         'License :: OSI Approved :: BSD License',
@@ -19,7 +19,7 @@ setup(
     ],
     py_modules=['thebot_translate'],
     install_requires=[
-        'thebot',
+        'thebot>=0.2.0',
         'requests',
         'anyjson',
     ],

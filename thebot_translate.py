@@ -1,16 +1,16 @@
-from __future__ import absolute_import
+from __future__ import absolute_import, unicode_literals
 
-import thebot
 import anyjson
 import requests
 
+from thebot import Plugin, on_command
 
-class Plugin(thebot.Plugin):
-    @thebot.route('translate (?P<some_text>.+)')
-    @thebot.route('translate (?P<some_text>.+) (?P<from_to>..-..)')
+
+class Plugin(Plugin):
+    @on_command('translate (?P<some_text>.+)')
+    @on_command('translate (?P<some_text>.+) (?P<from_to>..-..)')
     def on(self, request, some_text, from_to='en-ru'):
-        """Translates given text from one language to another.
-        """
+        """Translates given text from one language to another."""
 
         if from_to not in self.get_directions():
             request.respond(u'Supported translation directions are: ' + u', '.join(
