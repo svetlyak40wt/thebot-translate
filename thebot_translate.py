@@ -9,7 +9,7 @@ from thebot import Plugin, on_command
 class Plugin(Plugin):
     @on_command('translate (?P<some_text>.+)')
     @on_command('translate (?P<some_text>.+) (?P<from_to>..-..)')
-    def on(self, request, some_text, from_to='en-ru'):
+    def translate(self, request, some_text, from_to='en-ru'):
         """Translates given text from one language to another."""
 
         if from_to not in self.get_directions():
