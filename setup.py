@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='thebot-translate',
-    version='0.1.0',
+    version='0.1.1',
     description='Uses translate.yandex.ru, to translate the texts.',
     keywords='thebot language plugin',
     license = 'New BSD License',
@@ -19,7 +19,7 @@ setup(
     ],
     py_modules=['thebot_translate'],
     install_requires=[
-        'thebot>=0.2.0',
+        'thebot>=0.3.0',
         'requests',
         'anyjson',
     ],

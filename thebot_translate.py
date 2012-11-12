@@ -7,6 +7,10 @@ from thebot import Plugin, on_command
 
 
 class Plugin(Plugin):
+    """Translates word or phrase from one language to another.
+
+    Uses http://translate.yandex.ru
+    """
     @on_command('translate (?P<some_text>.+)')
     @on_command('translate (?P<some_text>.+) (?P<from_to>..-..)')
     def translate(self, request, some_text, from_to='en-ru'):
